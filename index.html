@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>FWBOT</title>
+  <title>FW bot</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.0/css/bootstrap.min.css">
@@ -24,11 +24,14 @@
   </nav>
   <div class="container">
 
-    <b><font size='+4'><span id='name_site'></span></font></b>
-	<span id='version_up'></span>&nbsp;<font size='1'><b><span class='badge bg-warrning'></span></b></font>
-	<b>RPC ENDPOINT : </b><select id='end_point' name='end_point' class='css-input-all'><option value='https://api.wax.alohaeos.com'>api.wax.alohaeos.com</option><option value='https://wax.pink.gg'>wax.pink.gg</option><option value='https://api.waxsweden.org'>api.waxsweden.org</option><option value='https://wax.blokcrafters.io'>wax.blokcrafters.io</option><option value='https://wax.eosphere.io'>wax.eosphere.io</option><option value='https://wax.eu.eosamsterdam.net'>wax.eu.eosamsterdam.net</option><option value='https://chain.wax.io'>chain.wax.io</option><option value='https://wax.cryptolions.io'>wax.cryptolions.io</option><option value='http://wax.greymass.com'>wax.greymass.com</option><option value='https://api.wax.bountyblok.io'>api.wax.bountyblok.io</option><option value='https://wax.eosusa.news'>wax.eosusa.news</option><option value='https://wax.dapplica.io'>wax.dapplica.io</option><option value='https://api.wax.greeneosio.com'>api.wax.greeneosio.com</option></select>&nbsp;<button type='button' class='btn-css' onclick='save_setting();'>SAVE ALL</button>
+    <b><font size='+4'><span id='name_site'></span></font></b><br>
+	<span id='version_up'></span>&nbsp;<font size='+2'><b><span class='badge bg-warrning'> | Donate : edo.i.c.wam</span></b></font><br><br>
+	<a href='https://tlmminer.com/AutoClickApprove.rar' target='_blank'><img src='js/approve.png' width='100'></a>&nbsp;&nbsp;<a href='https://wallet.wax.io' target='_blank'><img src='js/wax.png' width='100'></a>&nbsp;&nbsp;<a href='https://wax.alcor.exchange' target='_blank'><img src='js/alcor.png' width='100'></a>&nbsp;&nbsp;<a href='https://play.farmersworld.io' target='_blank'><img src='js/farm.png' width='100'></a>&nbsp;&nbsp;<a href='https://play.goldmand.io' target='_blank'><img src='js/goldm.png' width='100'></a>&nbsp;&nbsp;<a href='https://officeland.io/game' target='_blank'><img src='js/office.png' width='100'></a>&nbsp;&nbsp;<a href='https://game.nftpanda.space' target='_blank'><img src='js/panda.png' width='100'></a><br><br>
+	
+	<b>RPC ENDPOINT : </b><select id='end_point' name='end_point' class='css-input-all'><option value='https://chain.wax.io'>chain.wax.io</option><option value='http://api.waxsweden.org'>api.waxsweden.org</option><option value='https://wax.eosphere.io'>wax.eosphere.io</option><option value='http://wax.eosdublin.io'>wax.eosdublin.io</option><option value='http://wax.eosusa.news'>wax.eosusa.news</option><option value='http://wax.greymass.com'>wax.greymass.com</option><option value='https://wax.blokcrafters.io'>wax.blokcrafters.io</option><option value='http://apiwax.3dkrender.com'>apiwax.3dkrender.com</option><option value='http://waxapi.ledgerwise.io'>waxapi.ledgerwise.io</option><option value='http://api.wax.greeneosio.com'>api.wax.greeneosio.com</option><option value='http://hyperion-wax-mainnet.wecan.dev'>hyperion-wax-mainnet.wecan.dev</option><option value='http://history-wax-mainnet.wecan.dev'>history-wax-mainnet.wecan.dev</option><option value='https://api.wax.greeneosio.com'>api.wax.greeneosio.com</option></select>&nbsp;<button type='button' class='btn-css' onclick='save_setting();'>SAVE ALL</button>
+	
 	<br>
-	<input id="lineToken" class='css-input-all' placeholder="LINE TOKEN HERE">&nbsp;<button type="button" class='btn-css' onclick='lineNotifyTest()'>TEST LINE NOTIFY</button>
+	<input id="lineToken" class='css-input-all' placeholder="LINE TOKEN HERE" style='width:25em'>&nbsp;<button type="button" class='btn-css' onclick='lineNotifyTest()'>TEST LINE NOTIFY</button>
 	<button id="login" hidden onclick='login();'>WAX Login</button>
 	<input id="updater" hidden><input id="message" style="display:none;"><br>
 	<h5 id="usage"></h5>
@@ -57,6 +60,7 @@
     <input type='number' class='css-input-all' placeholder='Ex: 1.7569' id='with_dr'><select id='wi_tokens' name='wi_tokens' class='css-input-all'><option value='WOOD'>WOOD</option><option value='FOOD'>FOOD</option><option value='GOLD'>GOLD</option></select><button type='button' class='btn-css' onclick='with_dr();'>WITHDRAW</button><br>
 	<input type='number' class='css-input-all' placeholder='Ex: 1.7569' id='sell'><select id='se_tokens' name='se_tokens' class='css-input-all'><option value='FWW'>FWW</option><option value='FWF'>FWF</option><option value='FWG'>FWG</option></select><button type='button' class='btn-css' onclick='sell();'>SELL TOKENS</button><br>
 	<input type='number' class='css-input-all' placeholder='Ex: 1.115 ..by WAX' id='buy'><select id='by_tokens' name='by_tokens' class='css-input-all'><option value='FWG'>FWG</option><option value='FWF'>FWF</option><option value='FWW'>FWW</option></select><button type='button' class='btn-css' onclick='buy();'>BUY TOKENS</button><br>
+	<input class='css-input-all' placeholder='ex : user.wax' id='tranfer_coins'><button type='button' class='btn-css' onclick='tranfer_coins();'>TRANFER COINS</button><br>
 	<button type='button' class='btn-css' onclick='burn();'>BURN ALL CORN BARREY MILK</button></font>
 	
 	<hr>
